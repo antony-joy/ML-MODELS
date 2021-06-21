@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>Age</h3>
+            <input id="Age" name="Age" type="number ">
+			<h3>trestbps</h3>
+            <input id="trestbps" name="trestbps" type="number ">
+			<h3>thalach</h3>
+            <input id="thalach" name="thalach" type="number ">
+			<h3>oldpeak</h3>
+            <input id="oldpeak" name="oldpeak" type="number ">
+            
+            <h3>What Is the Persons Gender?</h3><br><select name="Sex_0" id="Sex_0" required="required">
+                <option value=1>MALE</option>
+                <option value=2>FEMALE</option>
+    
+            </select>
+            <h3>What is cp?</h3><br><select name="cp_1" id="cp_1" required="required">
+                <option value=1>1</option>
+                <option value=2>2</option>
+				<option value=3>3</option>
+				<option value=4>4</option>
+            </select>
+			<h3>fbs?</h3><br><select name="fbs_0" id="fbs_0" required="required">
+                <option value=0>fbs_0</option>
+                <option value=1>fbs_1</option>
+    
+            </select>
+			<h3>What Is RESTECG?</h3><br><select name="restecg_0" id="eighth" required="required">
+                <option value=0>restecg0</option>
+                <option value=1>restecg1</option>
+				<option value=2>restecg2</option>
+    
+            </select>
+			<h3>What Is the persons exang?</h3><br><select name="exang_0" id="exang_0" required="required">
+                <option value=0>exang_0</option>
+                <option value=1>exang_1</option>
+    
+            </select>
+			<h3>What Is Slope?</h3><br><select name="slope_1" id="slope_1" required="required">
+                <option value=1>slope_1</option>
+                <option value=2>slope_2</option>
+				<option value=3>slope_3</option>
+    
+            </select>
+			<h3>What Is Ca?</h3><br><select name="ca_0" id="ca_0" required="required">
+                <option value=0>ca_0</option>
+                <option value=1>ca_1</option>
+				<option value=2>ca_2</option>
+				<option value=3>ca_3</option></select>
+				
+			<h3>What Is thal?</h3><br><select name="thal_3" id="thal_3" required="required">
+                <option value=3>thal_3</option>
+                <option value=6>thal_6</option>
+				<option value=7>thal_7</option>
+				</select>
+				
+       
+            <br><br><button id="sub" type="submit ">SUBMIT</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_texts }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
